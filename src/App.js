@@ -1,36 +1,12 @@
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
 import logo from './logo.svg';
 import store from './js/store/index';
 import './App.css'; 
 import {increment,decrement} from './js/actions';
 import  { connect } from 'react-redux';
-const Title = styled.h1`
-  font-size: 2em;
-  text-align: center;
-  color: palevioletred;
-`;
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
-const Button = styled.button`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-
-  &:hover {
-    background: palevioletred;
-    color:white;
-  }
-  ${props => props.primary && css`
-    background: palevioletred;
-    color: white;
-  `}
-`;
+import Button from './styled-components/button';
+import Title from './styled-components/title';
+import Wrapper from './styled-components/wrapper';
 
 class App extends Component {
 
