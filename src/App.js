@@ -8,7 +8,8 @@ import Button from './styled-components/button';
 import Title from './styled-components/title';
 import Rotate from './styled-components/rotate';
 import Wrapper from './styled-components/wrapper';
-import Form from "./components/form";
+import Form from './components/form';
+import List from './components/list'
 
 class App extends Component {
 
@@ -30,6 +31,10 @@ class App extends Component {
             <Button onClick= { this.decrementCounter }> -1 (decrement)</Button>
             <Button onClick= { this.incrementCounter }> +1 (increment)</Button>
             <Form/>
+              <div className=""> 
+                  <Title>Articles</Title>
+                  <List /> 
+              </div>
           </body>
         </div>
       </Wrapper>
