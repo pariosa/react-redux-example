@@ -6,6 +6,7 @@ import {increment,decrement} from './js/actions';
 import  { connect } from 'react-redux';
 import Button from './styled-components/button';
 import Title from './styled-components/title';
+import Rotate from './styled-components/rotate';
 import Wrapper from './styled-components/wrapper';
 import Form from "./components/form";
 
@@ -24,6 +25,7 @@ class App extends Component {
       <Wrapper>
         <div className="App">
           <body>
+            <Rotate>🧙</Rotate>
             <Title>Counter: { this.props.count }</Title> 
             <Button onClick= { this.decrementCounter }> -1 (decrement)</Button>
             <Button onClick= { this.incrementCounter }> +1 (increment)</Button>
