@@ -29,6 +29,7 @@
     "numeral": "^2.0.6",
     "react-redux": "^5.0.7",
     "redux": "^4.0.1",
-    "styled-components": "^4.0.0"
+    "styled-components": "^4.0.0",
+    "uuid": "^3.3.2"
   }
 }
