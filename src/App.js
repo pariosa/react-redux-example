@@ -10,6 +10,7 @@ import Rotate from './styled-components/rotate';
 import Wrapper from './styled-components/wrapper';
 import Form from './components/form';
 import List from './components/list'
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends Component {
 
@@ -23,9 +24,9 @@ class App extends Component {
 
   render() {
     return (
-      <Wrapper>
-        <div className="App">
-          <body>
+      <BrowserRouter>
+        <Wrapper>
+          <div className="App"> 
             <Rotate>🧙</Rotate>
             <Title>Counter: { this.props.count }</Title> 
             <Button onClick= { this.decrementCounter }> -1 (decrement)</Button>
@@ -34,10 +35,10 @@ class App extends Component {
               <div className=""> 
                   <Title>Articles</Title>
                   <List /> 
-              </div>
-          </body>
-        </div>
-      </Wrapper>
+              </div> 
+          </div>
+        </Wrapper>
+      </BrowserRouter>
     );
   }
 } 
