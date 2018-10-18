@@ -10,9 +10,9 @@ import Rotate from './styled-components/rotate';
 import Wrapper from './styled-components/wrapper';
 import Form from './components/form';
 import List from './components/list'
-import { BrowserRouter, } from 'react-router-dom';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
-
+import Dashboard from './components/dashboard/Dashboard';
 
 class App extends Component {
 
@@ -31,6 +31,9 @@ class App extends Component {
           <Navbar/>
           <Wrapper>
             <div className="App"> 
+              <Switch>
+                <Route path="/" component={Dashboard}></Route>
+              </Switch>
               <Rotate>🧙</Rotate>
               <Title>Counter: { this.props.count }</Title> 
               <Button onClick= { this.decrementCounter }> -1 (decrement)</Button>
