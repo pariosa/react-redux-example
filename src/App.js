@@ -10,7 +10,9 @@ import Rotate from './styled-components/rotate';
 import Wrapper from './styled-components/wrapper';
 import Form from './components/form';
 import List from './components/list'
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+
 
 class App extends Component {
 
@@ -25,19 +27,22 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Wrapper>
-          <div className="App"> 
-            <Rotate>🧙</Rotate>
-            <Title>Counter: { this.props.count }</Title> 
-            <Button onClick= { this.decrementCounter }> -1 (decrement)</Button>
-            <Button onClick= { this.incrementCounter }> +1 (increment)</Button>
-            <Form/>
-              <div className=""> 
-                  <Title>Articles</Title>
-                  <List /> 
-              </div> 
-          </div>
-        </Wrapper>
+        <div>
+          <Navbar/>
+          <Wrapper>
+            <div className="App"> 
+              <Rotate>🧙</Rotate>
+              <Title>Counter: { this.props.count }</Title> 
+              <Button onClick= { this.decrementCounter }> -1 (decrement)</Button>
+              <Button onClick= { this.incrementCounter }> +1 (increment)</Button>
+              <Form/>
+                <div className=""> 
+                    <Title>Articles</Title>
+                    <List /> 
+                </div> 
+            </div>
+          </Wrapper>
+        </div>
       </BrowserRouter>
     );
   }
