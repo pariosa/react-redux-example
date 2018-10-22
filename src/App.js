@@ -1,18 +1,23 @@
-import React, { Component } from 'react';
+import './App.css'; 
 import logo from './logo.svg';
 import store from './js/store/index';
-import './App.css'; 
-import {increment,decrement} from './js/actions';
-import  { connect } from 'react-redux';
-import Button from './styled-components/button';
-import Title from './styled-components/title';
-import Rotate from './styled-components/rotate';
-import Wrapper from './styled-components/wrapper';
 import Form from './components/form';
 import List from './components/list'
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import  { connect } from 'react-redux';
+import React, { Component } from 'react';
+import Title from './styled-components/title';
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
+import Button from './styled-components/button';
 import Navbar from './components/layout/Navbar';
+import Rotate from './styled-components/rotate';
+import {increment,decrement} from './js/actions';
+import Wrapper from './styled-components/wrapper';
 import Dashboard from './components/dashboard/Dashboard';
+import CreateProject from './components/project/CreateProject'
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import ProjectDetails from './components/project/ProjectDetails';
+
 
 class App extends Component {
 
@@ -32,8 +37,13 @@ class App extends Component {
           <Wrapper>
             <div className="App"> 
               <Switch>
-                <Route path="/" component={Dashboard}></Route>
+                <Route exact path="/" component={Dashboard}></Route>
+                <Route path="/project/:id" component={ProjectDetails}></Route>
+                <Route path="/login" component={SignIn}></Route>
+                <Route path="/signup" component={SignUp}></Route>
+                <Route path="/newproject" component={CreateProject}></Route>
               </Switch>
+              {/*
               <Rotate>🧙</Rotate>
               <Title>Counter: { this.props.count }</Title> 
               <Button onClick= { this.decrementCounter }> -1 (decrement)</Button>
@@ -43,6 +53,7 @@ class App extends Component {
                     <Title>Articles</Title>
                     <List /> 
                 </div> 
+              */}
             </div>
           </Wrapper>
         </div>
