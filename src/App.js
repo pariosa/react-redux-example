@@ -34,7 +34,8 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navbar/>
-          <Wrapper>
+          {//<Wrapper>
+          }
             <div className="App"> 
               <Switch>
                 <Route exact path="/" component={Dashboard}></Route>
@@ -55,7 +56,8 @@ class App extends Component {
                 </div> 
               */}
             </div>
-          </Wrapper>
+          {//</Wrapper>
+          }
         </div>
       </BrowserRouter>
     );

@@ -25,11 +25,11 @@ class CreateProject extends Component{
 					<h5 className="grey-text text-darken-3">New Project</h5>
 					<div className="input-field"> 
 						<label htmlFor="title">Title</label>
-						<input type="text" id="title" placeholder="Hello World" onChange={this.handleChange} />
+						<input type="text" id="title"   onChange={this.handleChange} />
 					</div>
 					<div className="input-field"> 
 						<label htmlFor="content">Content</label>
-						<textarea className="material-textarea" id="content" cols="30" rows="10" placeholder="Lorem Ipsum etc..." onChange={this.handleChange}></textarea>
+						<textarea className="material-textarea" id="content" cols="30" rows="10" onChange={this.handleChange}></textarea>
 					</div> 
 					<div className="input-field"> 
 						<button className="btn pink lighten-1 z-depth-0">Post Project</button>
