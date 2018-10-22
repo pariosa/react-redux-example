@@ -40,3 +40,6 @@ textarea.materialize-textarea:focus:not([readonly]){
 	box-shadow:none;
 }
 
+.small-text{
+  font-size:11px;
+}
