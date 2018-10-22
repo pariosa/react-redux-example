@@ -5,9 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import index from "./js/index";
 import { Provider } from 'react-redux'
-import store from "./js/store"
+import store from "./js/store";
+import { createStore } from 'redux';
+import rootReducer from './js/reducers/rootReducer';
+
+const newStore = createStore(rootReducer);
+
 ReactDOM.render(
-	<Provider store={store}>
+	<Provider store={newStore}>
 		<App />
 	</Provider>, document.getElementById('root')
 );
