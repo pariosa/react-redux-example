@@ -10,9 +10,9 @@ import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import Button from './styled-components/button';
 import Navbar from './components/layout/Navbar';
-import Rotate from './styled-components/rotate';
-import {increment,decrement} from './js/actions';
+import Rotate from './styled-components/rotate'; 
 import Wrapper from './styled-components/wrapper';
+import { increment, decrement } from './js/actions';
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProject from './components/project/CreateProject'
 import { BrowserRouter, Switch, Route} from 'react-router-dom';

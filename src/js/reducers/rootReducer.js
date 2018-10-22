@@ -1,4 +1,3 @@
-import { ADD_ARTICLE, INCREMENT, DECREMENT } from "../constants/action-types";
 import authReducer from './authReducer';
 import projectReducer from './projectReducer';
 import actionReducer from './actionReducer';
