@@ -18,15 +18,18 @@ const newStore = createStore(rootReducer,
 	compose(
 		applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
 		reduxFirestore(firebase),
-		reactReduxFirebase(firebase)
+		reactReduxFirebase(firebase, {attachAuthIsReady: true})
 	)
 )
 
-ReactDOM.render(
-	<Provider store={newStore}>
-		<App />
-	</Provider>, document.getElementById('root')
-);
+
+newStore.firebaseAuthIsReady.then(()=>{
+	ReactDOM.render(
+		<Provider store={newStore}>
+			<App />
+		</Provider>, document.getElementById('root')
+	);
+})
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
