@@ -1,11 +1,14 @@
-import React from 'react';
+import React from 'react'
+import moment from 'moment'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import { firestoreConnect } from 'react-redux-firebase'
-import moment from 'moment';
+
 
 const ProjectDetails = (props) => {
-  const { project } = props;
+  const { project, auth } = props;
+  	if(!auth.uid) return <Redirect to="/login" />
   	if(project){
   		   console.log()
 
@@ -32,13 +35,13 @@ const ProjectDetails = (props) => {
 	}
 }
 
-const mapStateToProps = (state, ownProps) => {
-  // console.log(state);
+const mapStateToProps = (state, ownProps) => { 
   const id = ownProps.match.params.id;
   const projects = state.firestore.data.projects;
   const project = projects ? projects[id] : null
   return {
-    project: project
+    project: project,
+    auth: state.firebase.auth
   }
 }
 
