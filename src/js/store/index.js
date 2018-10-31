@@ -8,6 +8,7 @@ import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 const rrfConfig = {
 	attachAuthIsReady: true,
 	userProfile: 'users',
+	enableLogging: true,
 	useFirestoreForProfile: true  
 }
 
