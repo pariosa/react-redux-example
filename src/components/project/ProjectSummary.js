@@ -1,5 +1,5 @@
-import moment from 'moment';
 import React from 'react';
+import moment from 'moment';
 
 const ProjectSummary = ({project}) => {
 	return ( 
@@ -10,7 +10,7 @@ const ProjectSummary = ({project}) => {
 				<p>posted by {project.authorFirstName} {project.authorLastName}</p>
 				<div>&nbsp;</div>
 				<div className="card-action lighten-4">
-					<p className="grey-text"> created on {moment.unix(project.createdAt.seconds).format('LLL')}</p> 
+					<p className="grey-text"> created {moment.unix(project.createdAt.seconds).calendar()}</p> 
 					<p className="small-text grey-text"> retrieved from 🔥<span className="orange-text">base</span> on {moment(project.TIMESTAMP).format('LLL')}</p>
 				</div>
 			</div>

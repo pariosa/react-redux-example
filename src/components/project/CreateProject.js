@@ -20,6 +20,7 @@ class CreateProject extends Component{
 		this.props.createProject(this.state);
 		console.log(this.state);
 		console.log('input submitted');
+		this.props.history.push('/');
 	}
 
 	render(){
