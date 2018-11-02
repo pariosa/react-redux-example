@@ -22,3 +22,6 @@ yarn-error.log*
 
 #hide firebase config 
 /src/firebase/config.js
+
+#hide cloud functions node-modules
+/functions/node_modules/
